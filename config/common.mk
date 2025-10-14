@@ -131,6 +131,9 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 # Reduce system server verbosity
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 
+# Do not include other java mini debug info
+PRODUCT_OTHER_JAVA_DEBUG_INFO := false
+
 ifneq ($(TARGET_DISABLE_EPPE),true)
 # Require all requested packages to exist
 $(call enforce-product-packages-exist-internal,$(lastword $(_include_stack)),product_manifest.xml rild Calendar android.hidl.memory@1.0-impl.vendor vndk_apex_snapshot_package)
